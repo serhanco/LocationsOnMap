@@ -1,42 +1,37 @@
-# Acıbadem Bilgi Ofisleri Haritası
+# Acibadem Information Offices Map
 
-Bu proje, dünya genelindeki Acıbadem bilgi ofislerini interaktif bir harita üzerinde gösteren bir web uygulamasıdır. Kullanıcıların ofisleri ülke bazında filtrelemesine ve yoğun bölgelerdeki ofisleri kümelenmiş olarak görmesine olanak tanır.
+This project is a web application that displays Acibadem's worldwide information offices on an interactive map. It allows users to filter offices by country and view offices in dense areas as clusters.
 
-## Önizleme
 
-*Projenizin bir ekran görüntüsünü alıp reponuza yükledikten sonra aşağıdaki satırdaki `path/to/screenshot.png` kısmını resminizin yoluyla güncelleyebilirsiniz.*
+## Features
 
-![Harita Önizlemesi](path/to/screenshot.png)
+- **Interactive Map Interface:** A modern, pannable, and zoomable map.
+- **Custom Icons:** Uses the Acibadem logo instead of standard map pins.
+- **Marker Clustering:** When zoomed out, nearby offices are grouped into a single cluster with a number, which significantly improves readability.
+- **Filter by Country:** Selecting a country from the dropdown menu automatically zooms the map to show the offices in that specific country.
+- **Clickable Contact Information:** The phone numbers in the pop-up for each office are clickable, allowing users to initiate a call directly from mobile devices.
+- **Minimalist Map Style:** Uses a clean and professional CARTO Positron basemap to keep the focus on the data.
 
-## Özellikler
-
-- **İnteraktif Harita Arayüzü:** Kaydırılabilir ve yakınlaştırılabilir modern bir harita.
-- **Özelleştirilmiş İkonlar:** Standart harita pinleri yerine Acıbadem logosu kullanılır.
-- **Pin Kümeleme (Marker Clustering):** Harita uzaklaştırıldığında birbirine yakın olan ofisler, üzerinde sayı yazan tek bir küme içinde gruplanır, bu da haritanın okunabilirliğini artırır.
-- **Ülkeye Göre Filtreleme:** Açılır menüden bir ülke seçildiğinde, harita otomatik olarak o ülkedeki ofisleri gösterecek şekilde yakınlaşır.
-- **Tıklanabilir İletişim Bilgileri:** Her bir ofisin üzerine tıklandığında açılan bilgi penceresindeki telefon numaraları, mobil cihazlarda doğrudan arama yapmak için tıklanabilir özelliktedir.
-- **Minimalist Harita Stili:** Verilerin ön planda olmasını sağlayan, sade ve profesyonel bir CARTO Positron altlık haritası kullanılmıştır.
-
-## Kullanılan Teknolojiler
+## Technologies Used
 
 - **HTML5**
 - **CSS3**
 - **JavaScript (ES6)**
-- **[Leaflet.js](https://leafletjs.com/):** Açık kaynaklı, interaktif haritalar için lider JavaScript kütüphanesi.
-- **[Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster):** Leaflet için pinleri kümeleme eklentisi.
-- **[CARTO](https://carto.com/):** Harita altlıkları (tile layers) için servis sağlayıcı.
+- **[Leaflet.js](https://leafletjs.com/):** The leading open-source JavaScript library for interactive maps.
+- **[Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster):** A plugin for Leaflet to cluster markers.
+- **[CARTO](https://carto.com/):** Service provider for the map basemap (tile layer).
 
-## Kurulum ve Kullanım
+## Installation and Usage
 
-Bu proje, herhangi bir sunucu veya kurulum gerektirmeyen, tek bir HTML dosyasından oluşmaktadır.
+This project consists of a single HTML file that requires no server or special installation.
 
-1.  Repoyu bilgisayarınıza klonlayın:
+1.  Clone the repository to your local machine:
     ```bash
-    git clone [https://github.com/kullanici-adiniz/repo-adiniz.git](https://github.com/kullanici-adiniz/repo-adiniz.git)
+    git clone [https://github.com/serhanco/LocationsOnMap](https://github.com/serhanco/LocationsOnMap.git)
     ```
-2.  Proje klasörüne gidin.
-3.  `office_map.html` dosyasını herhangi bir modern web tarayıcısında (Google Chrome, Firefox, vb.) açın.
+2.  Navigate to the project folder.
+3.  Open the `index.html` file in any modern web browser (Google Chrome, Firefox, etc.).
 
-## Veri Kaynağı
+## Data Source
 
-Ofis konumları, telefon numaraları ve diğer bilgiler, `office_map.html` dosyası içerisindeki `officeList` adlı JavaScript dizisinde statik olarak tutulmaktadır. Koordinatlar, şehir merkezleri baz alınarak yaklaşık olarak belirlenmiştir.
+Office locations, phone numbers, and other information are statically stored in a JavaScript array named `officeList` within the `index.html` file. The coordinates are approximate and based on city centers.
