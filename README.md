@@ -31,7 +31,7 @@ This project is a self-contained single HTML file that requires no server or spe
 
 1.  Clone the repository to your local machine:
     ```bash
-    git clone [https://github.com/serhanco/LocationsOnMap.git](https://github.com/serhanco/LocationsOnMap.git)
+    git clone https://github.com/serhanco/LocationsOnMap.git
     ```
 2.  Navigate to the project folder.
 3.  Open the `index.html` file in any modern web browser.
