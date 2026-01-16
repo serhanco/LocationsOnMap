@@ -1,0 +1,51 @@
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; height: 100vh; }
+.header { padding: 10px 20px; background-color: #f8f8ff; border-bottom: 1px solid #ddd; z-index: 1000; display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
+.header h1 { margin: 0; font-size: 1.5em; flex-grow: 1; }
+label { font-weight: bold; margin-right: 5px; }
+select { padding: 8px; font-size: 1em; border-radius: 5px; border: 1px solid #ccc; }
+#map { flex-grow: 1; border-top: 1px solid #ccc; background-color: #f0f0f0; }
+.custom-div-icon { background-color: #004b87; border-radius: 50%; width: 38px; height: 38px; display: flex; justify-content: center; align-items: center; box-shadow: 0 0 5px rgba(0,0,0,0.3); transition: transform 0.2s ease-in-out; cursor: pointer; }
+.custom-div-icon:hover { transform: scale(1.1); }
+.custom-div-icon img { width: 70%; height: 70%; }
+.marker-cluster div { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; font-size: 14px; color: white; font-weight: bold; }
+.marker-cluster-small { background-color: #1f78b4; }
+.marker-cluster-medium { background-color: #005a9c; }
+.marker-cluster-large { background-color: #004b87; }
+#sidebar { position: fixed; right: -350px; top: 0; width: 320px; height: 100%; background: white; z-index: 2000; box-shadow: -2px 0 8px rgba(0,0,0,0.2); transition: right 0.3s ease-in-out; padding: 15px; box-sizing: border-box; overflow-y: auto; }
+#sidebar.open { right: 0; }
+#sidebar h2 { margin-top: 0; font-size: 1.2em; color: #004b87; }
+#sidebar p { line-height: 1.6; }
+#sidebar .close-btn { position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer; border: none; background: none; color: #888; }
+.location-button, .ai-button { padding: 8px 12px; font-size: 1em; cursor: pointer; background-color: #005a9c; color: white; border: none; border-radius: 5px; transition: background-color 0.2s; }
+.location-button:hover, .ai-button:hover { background-color: #004b87; }
+.ai-button { background-color: #5a009c; margin-top: 10px; width: 100%;}
+.ai-button:hover { background-color: #4b0087; }
+.ai-button:disabled { background-color: #ccc; cursor: not-allowed; }
+#ai-results { margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px; }
+#ai-results h3 { font-size: 1.1em; color: #004b87; }
+#ai-results ul { padding-left: 20px; }
+.loader { width: 20px; height: 20px; border: 3px solid #f3f3f3; border-top: 3px solid #005a9c; border-radius: 50%; animation: spin 1s linear infinite; margin: 10px auto; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.leaflet-bar a.leaflet-control-home {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath d='M220-180h150v-250h220v250h150v-390L480-765 220-570v390Zm-60 60v-510l320-240 320 240v510H610v-250H350v250H160Zm320-353Z'/%3E%3C/svg%3E");
+    background-size: 75%; background-position: center; background-repeat: no-repeat;
+}
+
+/* YENİ: Geliştirilmiş Ofis Etiketleri (Tooltip) için Stiller */
+.office-label {
+    background-color: rgba(255, 255, 255, 0.85); /* Yarı şeffaf beyaz arka plan */
+    border: 1px solid #ccc; /* İnce bir çerçeve */
+    border-radius: 4px; /* Yuvarlak köşeler */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Hafif bir gölge */
+    color: #333;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 2px 6px; /* İç boşluk */
+    opacity: 0; /* Başlangıçta gizli */
+    transition: opacity 0.2s ease-in-out;
+    white-space: nowrap; /* Metnin alt satıra kaymasını engelle */
+}
+
+#map.show-tooltips .office-label {
+    opacity: 1;
+}

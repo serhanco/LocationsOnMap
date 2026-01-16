@@ -27,7 +27,7 @@ This project is a web application that displays Acibadem's worldwide information
 
 ## ⚙️ Installation and Usage
 
-This project is a self-contained single HTML file that requires no server or special installation.
+This project is a static web application that runs directly in the browser without any server requirement.
 
 1.  Clone the repository to your local machine:
     ```bash
@@ -38,5 +38,5 @@ This project is a self-contained single HTML file that requires no server or spe
 
 ## 💾 Data Source
 
-Office locations, phone numbers, and other information are statically stored in a JavaScript array named `officeList` within the `index.html` file for reliability and simplicity. The coordinates are approximate and based on city centers.
+Office locations and phone numbers are stored in `js/data.js`. This separates the data from the application logic, making it easier to update the office list without touching the core code.
 ```eof
